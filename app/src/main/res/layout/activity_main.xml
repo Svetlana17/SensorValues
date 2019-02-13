@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp"
+        android:enabled="true"
+        android:text="Начать запись"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonStart"
+        android:enabled="false"
+        android:text="Стоп"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="349dp" />
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="266dp"
+        android:enabled="true"
+        android:text="Отправить"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <EditText
+        android:id="@+id/editK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:hint="Введите K"
+        android:inputType="number|numberDecimal"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <EditText
+        android:id="@+id/editAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editK"
+        android:ems="10"
+        android:hint="Введите alpha"
+        android:inputType="number|numberDecimal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <EditText
+        android:id="@+id/editShag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editK"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="73dp"
+        android:ems="10"
+        android:hint="Введите шаг дискретизации"
+        android:inputType="number|numberDecimal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="250dp" />
+</RelativeLayout>
