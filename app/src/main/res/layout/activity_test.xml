@@ -9,9 +9,12 @@
     tools:context=".TestActivity">
 
     <Button
+        android:id="@+id/buttonStart"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonStart"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="78dp"
         android:enabled="true"
         android:text="Start" />
 
@@ -65,6 +68,22 @@
         android:layout_marginBottom="7dp"
         android:ems="10"
         android:hint="alpha"
+        android:inputType="number|numberDecimal" />
+
+    <EditText
+        android:id="@+id/editS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editK"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="197dp"
+        android:ems="10"
+        android:hint="S"
         android:inputType="number|numberDecimal" />
 
 </RelativeLayout>
