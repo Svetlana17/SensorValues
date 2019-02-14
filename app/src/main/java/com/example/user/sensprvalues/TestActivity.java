@@ -550,10 +550,10 @@ public class TestActivity extends AppCompatActivity implements SensorEventListen
                     e.printStackTrace();
                 }
 
-                manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), v*1000);//было
-                manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), v*1000);///было
-// manager.registerListener(RecordActivity.this, manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), v);//выносить
-//                manager.registerListener(RecordActivity.this, manager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), v);///
+               // manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), v);//было
+             //   manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), v);///было
+            manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);//выносить
+               manager.registerListener(TestActivity.this, manager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), SensorManager.SENSOR_DELAY_NORMAL);///
 
                 isRunning = true;
                 return true;
@@ -610,15 +610,15 @@ public class TestActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onResume() {
         super.onResume();
-//        manager.registerListener(listener, sensorAccel,
-//                SensorManager.SENSOR_DELAY_NORMAL);
-//        manager.registerListener(listener, sensorGiros,
-//                SensorManager.SENSOR_DELAY_NORMAL);
+        manager.registerListener(listener, sensorAccel,
+                SensorManager.SENSOR_DELAY_GAME);
+        manager.registerListener(listener, sensorGiros,
+                SensorManager.SENSOR_DELAY_GAME);
         // manager.registerListener(listener, sensorAccel, 1000);
         //   manager.registerListener(listener, sensorGiros, 1000);
         //  manager.registerListener(listener, sensorAccel, v*1000);
-        manager.registerListener(listener, sensorAccel, v);
-        manager.registerListener(listener, sensorGiros, v);
+       // manager.registerListener(listener, sensorAccel, v);
+      //  manager.registerListener(listener, sensorGiros, v);
 
 
 
